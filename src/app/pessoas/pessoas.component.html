@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <Title>Cadastro de Pessoas</Title>
+</head>
+
+<body>
+    <h1>Pessoas</h1>
+
+    <table *ngIf="responsePessoas">
+        <thead>
+            <td>Nome</td>
+            <td>CPF</td>
+            <td>DataNascimento</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pessoa of responsePessoas.data">
+                <td>{{pessoa.nome}}</td>
+                <td>{{pessoa.cpf}}</td>
+                <td>{{pessoa.dataNascimento}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

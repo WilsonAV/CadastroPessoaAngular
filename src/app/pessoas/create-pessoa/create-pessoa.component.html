@@ -1,0 +1,35 @@
+<p>Criar Usuário</p>
+
+<div>
+    <label>Nome:
+        <input placeholder="Insira o Nome" [(ngModel)]="request.nome">
+    </label>
+    <br>
+    <label>CPF:
+        <input placeholder="Insira o CPF" [(ngModel)]="request.cpf">
+    </label>
+    <label>Data de Nacimento:
+        <input type="date" [(ngModel)]="request.dataNascimento">
+    </label>
+    <br>
+    <h4> Dados do Contato</h4>
+    <label>Nome:
+        <input type="text">
+    </label>
+    <label>Telefone:
+        <input type="number">
+    </label>
+    <label>E-mail:
+        <input>
+    </label>
+    <br><br>
+    <button (click)="save()">Cadastrar</button>
+
+    <div *ngIf="response">
+        <label>Nome: {{response.nome}}</label>
+        <label>CPF: {{response.cpf}}</label>
+        <label>Data de Nascimento: {{response.dataNascimento}}</label>
+
+    </div>
+
+</div>
